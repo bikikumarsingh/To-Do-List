@@ -1,0 +1,158 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    background-size: cover;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    display: grid;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container div {
+    font-weight: bold;
+    font-size: 37px;
+    color: rgb(0, 91, 3);
+    margin-left: 10px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.input-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"], input[type="date"] {
+    padding: 12px;
+    width: calc(100% - 24px);
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    background: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure full width */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ensure ul takes full width */
+}
+
+li {
+    background: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+    flex-wrap: wrap;  
+}
+
+.task-text {
+    flex: 3; /* Takes up more space */
+    margin-right: 10px;
+}
+
+.task-date {
+    flex: 1; /* Takes up less space */
+    margin-right: 10px;
+    font-style: italic;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.remove-task {
+    background: #ff6347;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.remove-task:hover {
+    background: #ff4500;
+}
+
+li.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .header {
+        grid-column: span 2;
+    }
+
+    .tasks {
+        grid-column: span 2;
+    }
+}
