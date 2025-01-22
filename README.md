@@ -1,4 +1,4 @@
-# To-Do List App
+# To-Do List 
 
 Welcome to the To-Do List App! This project is a simple and elegant web application for managing your daily tasks. 
 The app allows you to add tasks with a due date, mark them as completed, and remove them when done. It also features local storage to save your tasks between sessions.
